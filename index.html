@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maintenance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #ff0000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Left Section */
+.left {
+  flex: 1;
+}
+
+.badge {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Features */
+.features {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  text-align: center;
+  font-size: 14px;
+}
+
+.feature span {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+/* Email Box */
+.email-box {
+  display: flex;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.email-box input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+
+.email-box input::placeholder {
+  color: #eee;
+}
+
+.email-box button {
+  padding: 15px 25px;
+  border: none;
+  background: #fff;
+  color: #ff0000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email-box button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Right Section */
+.right {
+  flex: 1;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* Loader */
+[O.loader {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top: 6px solid #fff;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .features {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Left -->
+  <div class="left">
+    <div class="badge">• WE’LL BE BACK SOON •</div>
+
+    <h1>We’re Under Maintenance</h1>
+
+    <p>
+      We’re working hard to improve your experience.
+      Our website will be back online shortly!
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <span>🔧</span>
+        Improving<br>Services
+      </div>
+
+      <div class="feature">
+        <span>🛡️</span>
+        Better<br>Performance
+      </div>
+
+      <div class="feature">
+        <span>🚀</span>
+        New Features<br>Coming Soon
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Right -->
+  <div class="right">
+    <div class="card">
+      <h3>Working on it...</h3>
+      <div class="loader"></div>
+      <p>Please check back soon</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Thank you for your patience ❤️
+</div>
+
+</body>
+</html>
