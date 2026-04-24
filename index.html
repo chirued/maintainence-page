@@ -5,58 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maintenance</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
 <style>
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
 }
 
+/* Background */
 body {
-  background: #ff0000;
-  color: #fff;
   min-height: 100vh;
+  background: linear-gradient(135deg, #ff0000, #b30000);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* Floating pattern */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(rgba(255,255,255,0.15) 2px, transparent 2px);
+  background-size: 60px 60px;
+  animation: moveBg 20s linear infinite;
+}
+
+@keyframes moveBg {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-100px,-100px); }
 }
 
 /* Layout */
 .container {
-  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
   width: 90%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  align-items: center;
+  gap: 50px;
 }
 
-/* Left Section */
+/* Left */
 .left {
   flex: 1;
 }
 
 .badge {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 15px;
   opacity: 0.9;
 }
 
 h1 {
-  font-size: 60px;
-  font-weight: 700;
+  font-size: 58px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 17px;
   opacity: 0.9;
   margin-bottom: 30px;
 }
@@ -74,28 +90,27 @@ p {
 }
 
 .feature span {
-  display: block;
   font-size: 26px;
+  display: block;
   margin-bottom: 8px;
 }
 
-/* Email Box */
+/* Email box */
 .email-box {
   display: flex;
   background: rgba(255,255,255,0.15);
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .email-box input {
   flex: 1;
-  padding: 15px;
+  padding: 14px;
   border: none;
   outline: none;
   background: transparent;
-  color: #fff;
+  color: white;
 }
 
 .email-box input::placeholder {
@@ -103,41 +118,36 @@ p {
 }
 
 .email-box button {
-  padding: 15px 25px;
+  padding: 14px 20px;
   border: none;
-  background: #fff;
+  background: white;
   color: #ff0000;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.email-box button:hover {
-  background: #000;
-  color: #fff;
-}
-
-/* Right Section */
+/* Right card */
 .right {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
   background: rgba(255,255,255,0.1);
-  padding: 40px;
-  border-radius: 20px;
+  padding: 35px;
+  border-radius: 18px;
   text-align: center;
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
 }
 
 /* Loader */
-[O.loader {
-  width: 70px;
-  height: 70px;
-  border: 6px solid rgba(255,255,255,0.3);
-  border-top: 6px solid #fff;
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top: 5px solid white;
   border-radius: 50%;
   margin: 20px auto;
   animation: spin 1s linear infinite;
@@ -151,8 +161,8 @@ p {
 .footer {
   position: absolute;
   bottom: 20px;
-  width: 100%;
   text-align: center;
+  width: 100%;
   font-size: 14px;
   opacity: 0.9;
 }
@@ -179,14 +189,13 @@ p {
 
 <div class="container">
 
-  <!-- Left -->
   <div class="left">
     <div class="badge">• WE’LL BE BACK SOON •</div>
 
     <h1>We’re Under Maintenance</h1>
 
     <p>
-      We’re working hard to improve your experience.
+      We’re working hard to improve your experience.<br>
       Our website will be back online shortly!
     </p>
 
@@ -197,7 +206,7 @@ p {
       </div>
 
       <div class="feature">
-        <span>🛡️</span>
+        <span>⚡</span>
         Better<br>Performance
       </div>
 
@@ -207,9 +216,12 @@ p {
       </div>
     </div>
 
+    <div class="email-box">
+      <input type="email" placeholder="Your email address">
+      <button>Notify</button>
+    </div>
   </div>
 
-  <!-- Right -->
   <div class="right">
     <div class="card">
       <h3>Working on it...</h3>
