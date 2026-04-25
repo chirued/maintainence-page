@@ -17,12 +17,17 @@
 /* Background */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ff0000, #b30000);
+  /* background: linear-gradient(135deg, #ff0000, #b30000); */
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  margin: 0;
+  background: linear-gradient(to bottom right, #ad6b31, #feb47b);
+  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 /* Floating pattern */
@@ -34,6 +39,7 @@ body::before {
   background-image: radial-gradient(rgba(255,255,255,0.15) 2px, transparent 2px);
   background-size: 60px 60px;
   animation: moveBg 20s linear infinite;
+  color: #d40000;
 }
 
 @keyframes moveBg {
@@ -140,6 +146,8 @@ p {
   text-align: center;
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  background: #d40000;
 }
 
 /* Loader */
@@ -240,7 +248,7 @@ p {
     </div>
 
     <div class="email-box">
-     <h3> For any inquiries, please feel free to call <label style="font-weight: bold"> 988 988 7157, 888 676 2222</label></h3>
+     <h3> For any inquiries, please feel free to call <label style="font-weight: bold"> 988 988 7157, <p>888 676 2222</p></label></h3>
     </div>
   </div>
 
